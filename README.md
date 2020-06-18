@@ -1,4 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Easy to implement Banano currency payments via QR code
+
+## Description
+
+The code allows adding Banano currency payments to any Web page by **including a single JavaScript file** and configuring the `<div>` container to host the button and the resulting QR code.
+
+## Usage
+
+```html
+<body>
+  <div
+      id="banano-button"
+      data-title="Donate 10 BAN"
+      data-address="ban_1mcjisg83r4tuy811i8j33pwdo86c1xrma1on4zc9jb8az6q1qow1xz33qar"
+      data-amount="10"
+      data-info="yes"
+      data-label="fund"
+      data-qr-size="128"
+      data-qr-level="M"
+      data-qr-fg="#000090"
+      data-qr-bg="#FFFFFF"
+    ></div>
+  <script src="banano_button.min.js"></script>
+</body>
+```
+
+## Container data options
+
+All `data-` parameters are send to the underlaying React component. They are divided in two categories:
+
+* **Banano URI** generation parameters:
+  * `data-title` - Text to be displayed on the button. *Optional*. *Default*: 'Pay with BAN'
+  * `data-address` - Banano address to send the payment. *Required*
+  * `data-amount` - Amount of Banano tokens. *Optional*
+  * `data-label` - Label for easy payment identification. *Optional*
+  * `data-info` - Add text information (address, amount and label) after the QR code. *Optional*
+* **QR Code** configuration - all *data-qr-* parameters are optional:
+  * `data-qr-size` - QR code size. *Default:* 128
+  * `data-qr-level` - Error correction level. *Default:* 'M'
+  * `data-qr-fg` - QR code foreground. *Default:* '#000000'
+  * `data-qr-bg` - QR code background. *Default:* '#FFFFFF'
 
 ## Available Scripts
 
@@ -6,63 +46,17 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The page will reload if you make edits.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
+Builds the app for production to the `public` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The build is minified and your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+*public/* directory contains all necessary files (*JavaScript* and *HTML*) so starting any web server (like for example *armor*) in that directory will allow examination of the result.
