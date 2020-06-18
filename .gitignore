@@ -10,6 +10,7 @@
 
 # production
 /build
+/public/banano_button.min.js.LICENSE.txt
 
 # misc
 .DS_Store
