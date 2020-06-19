@@ -76,7 +76,7 @@ class BananoButton extends React.Component {
           </button>}
             {showQR && <QRCode
                       value={bananoURI}
-                      size={data.qrSize ? data.qrSize : 128}
+                      size={data.qrSize ? parseInt(data.qrSize, 10) : 128}
                       level={data.qrLevel ? data.qrLevel : 'M'}
                       fgColor={data.qrFg}
                       bgColor={data.qrBg}
