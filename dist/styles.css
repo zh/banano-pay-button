@@ -1,0 +1,38 @@
+#content {
+  float: right ;
+  width: 80% ;
+}
+#navbar {
+  float: right;
+  width: 20%;
+}
+
+#innercontent {
+  padding-left: 10px ;
+  padding-right: 10px ;
+}
+#innernavbar {
+  padding-left: 10px ;
+  padding-right: 5px ;
+  padding-top: 2rem;
+  word-wrap    : break-word;
+  overflow-wrap: break-word;
+}
+
+#header {
+  text-align: center ;
+}
+
+#footer {
+  text-align: center ;
+  clear: both ;
+}
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+@-ms-viewport {
+  width: device-width ;
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Banano Donation Demo</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="github.css?v=1.0">
+  <link rel="stylesheet" href="styles.css?v=1.0">
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="header" class="page-header">
+      <h1 class="project-name">Banano Payment Button Demo</h1>
+      <h2 class="project-tagline">Easy to implement Banano payments via QR code.</h2>
+      <a href="https://github.com/zh/banano-pay-button" class="btn">View on GitHub</a>
+    </div>
+    <div id="content" class="main-content">
+  <div id="innercontent">
+  This page is a demo for the <a
+    href="https://zh.github.io/banano-pay-button/">banano-pay-button</a>
+  project. Pressing the <code>"Donate 50 BAN"</code> button will generate QR
+  Code for a valid <a
+    href="https://github.com/BananoCoin/banano/wiki/Network-Specifications#addresses">Banano
+    payment URI</a>, which include <b>address, amount</b> and a <b>label</b> for easier
+  payment origin identification. The exact code, implementing the donation
+  button is:
+  <div class="highlight"><pre class="highlight"><code>
+  <span class="nt">&lt;div</span>
+      <span class="na">id=</span><span class="s">"banano-button"</span>
+      <span class="na">data-title=</span><span class="s">"Donate 50 BAN"</span>
+      <span class="na">data-address=</span><span class="s">"ban_1mcjisg83r4tuy811i8j33pwdo86c1xrma1on4zc9jb8az6q1qow1xz33qar"</span>
+      <span class="na">data-amount=</span><span class="s">"50"</span>
+      <span class="na">data-info=</span><span class="s">"yes"</span>
+      <span class="na">data-label=</span><span class="s">"fund"</span>
+      <span class="na">data-qr-size=</span><span class="s">"128"</span>
+      <span class="na">data-qr-level=</span><span class="s">"M"</span>
+      <span class="na">data-qr-fg=</span><span class="s">"#606c71"</span>
+      <span class="na">data-qr-bg=</span><span class="s">"#FFFFFF"</span>
+    <span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/gh/zh/banano-pay-button/dist/banano_button.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+  QR Code will replace the button itself, so in order to see it again, please
+  reload the page.
+  <p>
+  Everybody can add similar button to their own page by just including the
+  single JavaScript file from the provided CDN URL and configuring &lt;div&gt;
+  container for their needs. The only required parameters are <b>id</b> -
+  should be <b>"banano-button"</b> and <b>data-address</b> - should be
+  <b>valid Banano address</b> for receiving the tokens.
+  </p>
+  <p>
+  The purpose of the button is to only generate QR code, the payment itself
+  should be done after scanning the image with real mobile Banano wallet (I'm
+  using <a
+          href="https://www.publish0x.com/banano/banano-mobile-wallet-update-kalium-v213-released-xgdywdp">Kalium</a>
+  for my everyday Banano transactions).
+  </p>
+  <p>
+  This page is just a demo, but the <b>Banano address is real</b>, so <b>contributing a
+    small amount of Banano</b> will be hugely appreciated, will support my work and keep me going.
+  </p>
+  </div>
+  </div>
+  <div id="navbar">
+    <div id="innernavbar">
+    <p>Press the button to generate QR code for payment</p>
+    <div
+        id="banano-button"
+        data-title="Donate 50 BAN"
+        data-address="ban_1mcjisg83r4tuy811i8j33pwdo86c1xrma1on4zc9jb8az6q1qow1xz33qar"
+        data-amount="50"
+        data-info="yes"
+        data-label="fund"
+        data-qr-size="128"
+        data-qr-level="M"
+        data-qr-fg="#606c71"
+        data-qr-bg="#FFFFFF"
+      ></div>
+      <script src="https://cdn.jsdelivr.net/gh/zh/banano-pay-button/dist/banano_button.min.js"></script>
+    </div>
+  </div>
+  <div id="footer" class="site-footer">
+    <div class="site-footer-owner">
+      Copyright &copy: 2020 by <a href="https://github.com/zh">Stoyan Zhekov</a>
+    </div>
+  </div>
+  </div>
+  </body>
+  </html>
