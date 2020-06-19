@@ -20,7 +20,7 @@ The code allows adding Banano currency payments to any Web page by **including a
       data-qr-fg="#000090"
       data-qr-bg="#FFFFFF"
     ></div>
-  <script src="banano_button.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/zh/banano-pay-button/dist/banano_button.min.js"></script>
 </body>
 ```
 
